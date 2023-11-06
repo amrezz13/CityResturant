@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
+import ResturantPage from "./components/ResturantPage"; // Import as default
+import { SafeAreaView } from "react-native-web";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <>
       <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <ResturantPage />
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 60,
+    paddingHorizontal: 16,
+
+    // flex: 1,
+    // margin: 100,
+    // flexDirection: "column",
+    // backgroundColor: "#fff",
+    // alignItems: "flex-start",
+    // justifyContent: "flex-start",
   },
 });
